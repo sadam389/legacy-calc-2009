@@ -1,6 +1,4 @@
-
 #include <stdlib.h>
-
 #include <exception>
 #include <iostream>
 #include <stdexcept>
@@ -91,16 +89,38 @@ CALC_TYPE parseCommandLine(int argc, char **argv, CmdLineParser &clp, LoanCalcul
     return ct;
   }
 
-  calculator.setAmount(
-       ((CmdLineOptionInt*)   clp.getCmdLineOption(ARG_AMOUNT))->getValue());
+  // --- BUG FIX START: Input Validation for Negative Numbers ---
+  
+  // Extract values first
+  int amount = ((CmdLineOptionInt*) clp.getCmdLineOption(ARG_AMOUNT))->getValue();
+  float interest = ((CmdLineOptionFloat*) clp.getCmdLineOption(ARG_INTEREST))->getValue();
+  int period = ((CmdLineOptionInt*) clp.getCmdLineOption(ARG_PERIOD_TOTAL))->getValue();
+
+  // Check for negative values before setting them
+  if (amount < 0) {
+      cerr << "Error: Loan amount cannot be negative." << endl;
+      return CALC_UNKNOWN;
+  }
+  if (interest < 0) {
+      cerr << "Error: Interest rate cannot be negative." << endl;
+      return CALC_UNKNOWN;
+  }
+  if (period < 0) {
+      cerr << "Error: Period cannot be negative." << endl;
+      return CALC_UNKNOWN;
+  }
+
+  // If valid, set the values
+  calculator.setAmount(amount);
+  calculator.setInterest(interest);
+  calculator.setPeriodTotal(period);
+  
+  // --- BUG FIX END ---
+
   calculator.setInitialPayment(
        ((CmdLineOptionFloat*) clp.getCmdLineOption(ARG_INITIAL_PAYMENT))->getValue());
-  calculator.setInterest(
-       ((CmdLineOptionFloat*) clp.getCmdLineOption(ARG_INTEREST))->getValue());
   calculator.setPayment(
        ((CmdLineOptionFloat*) clp.getCmdLineOption(ARG_PAYMENT))->getValue());
-  calculator.setPeriodTotal(
-       ((CmdLineOptionInt*)   clp.getCmdLineOption(ARG_PERIOD_TOTAL))->getValue());
   calculator.setPeriodElapsed(
        ((CmdLineOptionInt*)   clp.getCmdLineOption(ARG_PERIOD_ELAPSED))->getValue());
   calculator.setOpeningFee(
