@@ -1,0 +1,275 @@
+\doxysection{Loan\+Calculator Class Reference}
+\hypertarget{class_loan_calculator}{}\label{class_loan_calculator}\index{LoanCalculator@{LoanCalculator}}
+
+
+A class to handle loan and EMI calculations.  
+
+
+
+
+{\ttfamily \#include $<$Loan.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_loan_calculator_a78b9f7ef6a4413b2e1524551972aa428}\label{class_loan_calculator_a78b9f7ef6a4413b2e1524551972aa428} 
+{\bfseries Loan\+Calculator} ()
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{class_loan_calculator}{Loan\+Calculator}. Initializes all member variables to zero. \end{DoxyCompactList}\item 
+\Hypertarget{class_loan_calculator_a9d2151b8acaabdc4c6b41a13634472f2}\label{class_loan_calculator_a9d2151b8acaabdc4c6b41a13634472f2} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Loan\+Calculator} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{class_loan_calculator}{Loan\+Calculator}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_loan_calculator_a9c4895e2bc87c3be3fc1350385568709}{set\+Amount}} (long double amount)
+\begin{DoxyCompactList}\small\item\em Sets the loan amount. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_loan_calculator_a0488420d643c6eae52bce312cb8949a9}{set\+Period\+Total}} (int period)
+\begin{DoxyCompactList}\small\item\em Sets the total loan period. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_loan_calculator_a87f5bb02d1ab8b315cdddb000f6d5a8d}{set\+Interest}} (long double interest)
+\begin{DoxyCompactList}\small\item\em Sets the annual interest rate. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_loan_calculator_a0c6168e31f59bac651086d602cdcf6c0}{set\+Payment}} (long double payment)
+\begin{DoxyCompactList}\small\item\em Sets the monthly payment amount. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_loan_calculator_a1216cb5cd18fb07404c51477f7ca7866}{set\+Period\+Elapsed}} (int period)
+\begin{DoxyCompactList}\small\item\em Sets the elapsed period for balance calculation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_loan_calculator_a55cf79a1a27d1f809c490c82faffa8f8}{set\+Initial\+Payment}} (long double payment)
+\begin{DoxyCompactList}\small\item\em Sets the initial down payment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_loan_calculator_a7e12089734916fb9319bb678ad221e58}{set\+Opening\+Fee}} (long double fee)
+\begin{DoxyCompactList}\small\item\em Sets the opening fee. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_loan_calculator_a5331495e9736a1bb80cf4acb315a7fec}{set\+Opening\+Percent}} (long double percent)
+\begin{DoxyCompactList}\small\item\em Sets the opening fee percentage. \end{DoxyCompactList}\item 
+\Hypertarget{class_loan_calculator_a1b1f121ac27999dc0f1a5b0a382ad7cb}\label{class_loan_calculator_a1b1f121ac27999dc0f1a5b0a382ad7cb} 
+long double {\bfseries get\+Period\+Total} ()
+\item 
+\Hypertarget{class_loan_calculator_aa8845420756e481c97d1fccb909ca5d7}\label{class_loan_calculator_aa8845420756e481c97d1fccb909ca5d7} 
+long double {\bfseries get\+Opening\+Fee} ()
+\item 
+\Hypertarget{class_loan_calculator_a4cb65b8c464efc973a066e2eb9869206}\label{class_loan_calculator_a4cb65b8c464efc973a066e2eb9869206} 
+long double {\bfseries get\+Opening\+Percent} ()
+\item 
+long double \mbox{\hyperlink{class_loan_calculator_ae0febfab39ea987ede3b75157b893464}{calculate\+Loan\+Balance}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the remaining loan balance after a specific period. \end{DoxyCompactList}\item 
+long double \mbox{\hyperlink{class_loan_calculator_a728212380d4c208992dc89fce0280edb}{calculate\+Payment}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the monthly EMI payment. \end{DoxyCompactList}\item 
+long double \mbox{\hyperlink{class_loan_calculator_ab7a47fec2b8ffc63a1eae6d55a236f78}{calculate\+Number\+Payments}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the number of payments required (Approximation). \end{DoxyCompactList}\item 
+long double \mbox{\hyperlink{class_loan_calculator_a289aa32a75f5eacc8f16eeea4fb7c2dc}{calculate\+Loan\+Amount}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the initial loan amount based on payment and rate. \end{DoxyCompactList}\item 
+long double \mbox{\hyperlink{class_loan_calculator_a145b491eda0404751cc16233c5e5b0f4}{calculate\+Interest\+Rate}} ()
+\begin{DoxyCompactList}\small\item\em Returns the annual interest rate. \end{DoxyCompactList}\item 
+long double \mbox{\hyperlink{class_loan_calculator_ad2546bc29d720c0f7043ecf67b928056}{calculate\+Effective\+Interest\+Rate}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the effective interest rate including fees. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class to handle loan and EMI calculations. 
+
+The \doxylink{class_loan_calculator}{Loan\+Calculator} class provides methods to calculate monthly payments, total interest, and effective interest rates based on loan amount, tenure, and interest rate. 
+
+\label{doc-func-members}
+\Hypertarget{class_loan_calculator_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_loan_calculator_ad2546bc29d720c0f7043ecf67b928056}\index{LoanCalculator@{LoanCalculator}!calculateEffectiveInterestRate@{calculateEffectiveInterestRate}}
+\index{calculateEffectiveInterestRate@{calculateEffectiveInterestRate}!LoanCalculator@{LoanCalculator}}
+\doxysubsubsection{\texorpdfstring{calculateEffectiveInterestRate()}{calculateEffectiveInterestRate()}}
+{\footnotesize\ttfamily \label{class_loan_calculator_ad2546bc29d720c0f7043ecf67b928056} 
+long double Loan\+Calculator\+::calculate\+Effective\+Interest\+Rate (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Calculates the effective interest rate including fees. 
+
+\begin{DoxyReturn}{Returns}
+The effective annual interest rate. 
+\end{DoxyReturn}
+\Hypertarget{class_loan_calculator_a145b491eda0404751cc16233c5e5b0f4}\index{LoanCalculator@{LoanCalculator}!calculateInterestRate@{calculateInterestRate}}
+\index{calculateInterestRate@{calculateInterestRate}!LoanCalculator@{LoanCalculator}}
+\doxysubsubsection{\texorpdfstring{calculateInterestRate()}{calculateInterestRate()}}
+{\footnotesize\ttfamily \label{class_loan_calculator_a145b491eda0404751cc16233c5e5b0f4} 
+long double Loan\+Calculator\+::calculate\+Interest\+Rate (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Returns the annual interest rate. 
+
+\begin{DoxyReturn}{Returns}
+The interest rate percentage. 
+\end{DoxyReturn}
+\Hypertarget{class_loan_calculator_a289aa32a75f5eacc8f16eeea4fb7c2dc}\index{LoanCalculator@{LoanCalculator}!calculateLoanAmount@{calculateLoanAmount}}
+\index{calculateLoanAmount@{calculateLoanAmount}!LoanCalculator@{LoanCalculator}}
+\doxysubsubsection{\texorpdfstring{calculateLoanAmount()}{calculateLoanAmount()}}
+{\footnotesize\ttfamily \label{class_loan_calculator_a289aa32a75f5eacc8f16eeea4fb7c2dc} 
+long double Loan\+Calculator\+::calculate\+Loan\+Amount (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Calculates the initial loan amount based on payment and rate. 
+
+\begin{DoxyReturn}{Returns}
+The principal loan amount. 
+\end{DoxyReturn}
+\Hypertarget{class_loan_calculator_ae0febfab39ea987ede3b75157b893464}\index{LoanCalculator@{LoanCalculator}!calculateLoanBalance@{calculateLoanBalance}}
+\index{calculateLoanBalance@{calculateLoanBalance}!LoanCalculator@{LoanCalculator}}
+\doxysubsubsection{\texorpdfstring{calculateLoanBalance()}{calculateLoanBalance()}}
+{\footnotesize\ttfamily \label{class_loan_calculator_ae0febfab39ea987ede3b75157b893464} 
+long double Loan\+Calculator\+::calculate\+Loan\+Balance (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Calculates the remaining loan balance after a specific period. 
+
+\begin{DoxyReturn}{Returns}
+The remaining balance as a long double. 
+\end{DoxyReturn}
+\Hypertarget{class_loan_calculator_ab7a47fec2b8ffc63a1eae6d55a236f78}\index{LoanCalculator@{LoanCalculator}!calculateNumberPayments@{calculateNumberPayments}}
+\index{calculateNumberPayments@{calculateNumberPayments}!LoanCalculator@{LoanCalculator}}
+\doxysubsubsection{\texorpdfstring{calculateNumberPayments()}{calculateNumberPayments()}}
+{\footnotesize\ttfamily \label{class_loan_calculator_ab7a47fec2b8ffc63a1eae6d55a236f78} 
+long double Loan\+Calculator\+::calculate\+Number\+Payments (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Calculates the number of payments required (Approximation). 
+
+\begin{DoxyReturn}{Returns}
+The number of months. 
+\end{DoxyReturn}
+\Hypertarget{class_loan_calculator_a728212380d4c208992dc89fce0280edb}\index{LoanCalculator@{LoanCalculator}!calculatePayment@{calculatePayment}}
+\index{calculatePayment@{calculatePayment}!LoanCalculator@{LoanCalculator}}
+\doxysubsubsection{\texorpdfstring{calculatePayment()}{calculatePayment()}}
+{\footnotesize\ttfamily \label{class_loan_calculator_a728212380d4c208992dc89fce0280edb} 
+long double Loan\+Calculator\+::calculate\+Payment (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Calculates the monthly EMI payment. 
+
+
+\begin{DoxyItemize}
+\item Uses the standard EMI formula\+: P \texorpdfstring{$\ast$}{*} r \texorpdfstring{$\ast$}{*} (1+r)\texorpdfstring{$^\wedge$}{\string^}n / ((1+r)\texorpdfstring{$^\wedge$}{\string^}n -\/ 1)
+\item \begin{DoxyReturn}{Returns}
+The monthly payment amount. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}\Hypertarget{class_loan_calculator_a9c4895e2bc87c3be3fc1350385568709}\index{LoanCalculator@{LoanCalculator}!setAmount@{setAmount}}
+\index{setAmount@{setAmount}!LoanCalculator@{LoanCalculator}}
+\doxysubsubsection{\texorpdfstring{setAmount()}{setAmount()}}
+{\footnotesize\ttfamily \label{class_loan_calculator_a9c4895e2bc87c3be3fc1350385568709} 
+void Loan\+Calculator\+::set\+Amount (\begin{DoxyParamCaption}\item[{long double}]{amount}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the loan amount. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & The principal loan amount. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_loan_calculator_a55cf79a1a27d1f809c490c82faffa8f8}\index{LoanCalculator@{LoanCalculator}!setInitialPayment@{setInitialPayment}}
+\index{setInitialPayment@{setInitialPayment}!LoanCalculator@{LoanCalculator}}
+\doxysubsubsection{\texorpdfstring{setInitialPayment()}{setInitialPayment()}}
+{\footnotesize\ttfamily \label{class_loan_calculator_a55cf79a1a27d1f809c490c82faffa8f8} 
+void Loan\+Calculator\+::set\+Initial\+Payment (\begin{DoxyParamCaption}\item[{long double}]{payment}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the initial down payment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em payment} & The initial payment amount. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_loan_calculator_a87f5bb02d1ab8b315cdddb000f6d5a8d}\index{LoanCalculator@{LoanCalculator}!setInterest@{setInterest}}
+\index{setInterest@{setInterest}!LoanCalculator@{LoanCalculator}}
+\doxysubsubsection{\texorpdfstring{setInterest()}{setInterest()}}
+{\footnotesize\ttfamily \label{class_loan_calculator_a87f5bb02d1ab8b315cdddb000f6d5a8d} 
+void Loan\+Calculator\+::set\+Interest (\begin{DoxyParamCaption}\item[{long double}]{interest}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the annual interest rate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em interest} & The yearly interest rate in percent. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_loan_calculator_a7e12089734916fb9319bb678ad221e58}\index{LoanCalculator@{LoanCalculator}!setOpeningFee@{setOpeningFee}}
+\index{setOpeningFee@{setOpeningFee}!LoanCalculator@{LoanCalculator}}
+\doxysubsubsection{\texorpdfstring{setOpeningFee()}{setOpeningFee()}}
+{\footnotesize\ttfamily \label{class_loan_calculator_a7e12089734916fb9319bb678ad221e58} 
+void Loan\+Calculator\+::set\+Opening\+Fee (\begin{DoxyParamCaption}\item[{long double}]{fee}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the opening fee. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fee} & The flat opening fee amount. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_loan_calculator_a5331495e9736a1bb80cf4acb315a7fec}\index{LoanCalculator@{LoanCalculator}!setOpeningPercent@{setOpeningPercent}}
+\index{setOpeningPercent@{setOpeningPercent}!LoanCalculator@{LoanCalculator}}
+\doxysubsubsection{\texorpdfstring{setOpeningPercent()}{setOpeningPercent()}}
+{\footnotesize\ttfamily \label{class_loan_calculator_a5331495e9736a1bb80cf4acb315a7fec} 
+void Loan\+Calculator\+::set\+Opening\+Percent (\begin{DoxyParamCaption}\item[{long double}]{percent}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the opening fee percentage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em percent} & The percentage of the loan amount charged as a fee. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_loan_calculator_a0c6168e31f59bac651086d602cdcf6c0}\index{LoanCalculator@{LoanCalculator}!setPayment@{setPayment}}
+\index{setPayment@{setPayment}!LoanCalculator@{LoanCalculator}}
+\doxysubsubsection{\texorpdfstring{setPayment()}{setPayment()}}
+{\footnotesize\ttfamily \label{class_loan_calculator_a0c6168e31f59bac651086d602cdcf6c0} 
+void Loan\+Calculator\+::set\+Payment (\begin{DoxyParamCaption}\item[{long double}]{payment}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the monthly payment amount. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em payment} & The monthly EMI amount. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_loan_calculator_a1216cb5cd18fb07404c51477f7ca7866}\index{LoanCalculator@{LoanCalculator}!setPeriodElapsed@{setPeriodElapsed}}
+\index{setPeriodElapsed@{setPeriodElapsed}!LoanCalculator@{LoanCalculator}}
+\doxysubsubsection{\texorpdfstring{setPeriodElapsed()}{setPeriodElapsed()}}
+{\footnotesize\ttfamily \label{class_loan_calculator_a1216cb5cd18fb07404c51477f7ca7866} 
+void Loan\+Calculator\+::set\+Period\+Elapsed (\begin{DoxyParamCaption}\item[{int}]{period}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the elapsed period for balance calculation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em period} & The number of months passed. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_loan_calculator_a0488420d643c6eae52bce312cb8949a9}\index{LoanCalculator@{LoanCalculator}!setPeriodTotal@{setPeriodTotal}}
+\index{setPeriodTotal@{setPeriodTotal}!LoanCalculator@{LoanCalculator}}
+\doxysubsubsection{\texorpdfstring{setPeriodTotal()}{setPeriodTotal()}}
+{\footnotesize\ttfamily \label{class_loan_calculator_a0488420d643c6eae52bce312cb8949a9} 
+void Loan\+Calculator\+::set\+Period\+Total (\begin{DoxyParamCaption}\item[{int}]{period}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the total loan period. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em period} & The total number of months. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+DELL/legacy-\/calc-\/2009/src/\mbox{\hyperlink{_loan_8h}{Loan.\+h}}\item 
+C\+:/\+Users/\+DELL/legacy-\/calc-\/2009/src/Loan.\+cpp\end{DoxyCompactItemize}

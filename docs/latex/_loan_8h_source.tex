@@ -1,0 +1,62 @@
+\doxysection{Loan.\+h}
+\hypertarget{_loan_8h_source}{}\label{_loan_8h_source}\index{C:/Users/DELL/legacy-\/calc-\/2009/src/Loan.h@{C:/Users/DELL/legacy-\/calc-\/2009/src/Loan.h}}
+\mbox{\hyperlink{_loan_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ LOAN\_H}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ LOAN\_H}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_loan_calculator_a78b9f7ef6a4413b2e1524551972aa428}{LoanCalculator}}\ \{}
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{class_loan_calculator_a78b9f7ef6a4413b2e1524551972aa428}{LoanCalculator}}();}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_loan_calculator_a9d2151b8acaabdc4c6b41a13634472f2}{\string~LoanCalculator}}();}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_loan_calculator_a9c4895e2bc87c3be3fc1350385568709}{setAmount}}(\textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ amount)\ \{\ amount\_\ =\ amount;\ \}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_loan_calculator_a0488420d643c6eae52bce312cb8949a9}{setPeriodTotal}}(\textcolor{keywordtype}{int}\ period)\ \{\ periodTotal\_\ =\ period;\ \}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_loan_calculator_a87f5bb02d1ab8b315cdddb000f6d5a8d}{setInterest}}(\textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ interest)\ \{\ interest\_\ =\ interest;\ \}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_loan_calculator_a0c6168e31f59bac651086d602cdcf6c0}{setPayment}}(\textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ payment)\ \{\ payment\_\ =\ payment;\ \}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_loan_calculator_a1216cb5cd18fb07404c51477f7ca7866}{setPeriodElapsed}}(\textcolor{keywordtype}{int}\ period)\ \{\ periodElapsed\_\ =\ period;\ \}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_loan_calculator_a55cf79a1a27d1f809c490c82faffa8f8}{setInitialPayment}}(\textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ payment)\ \{\ initialPayment\_\ =\ payment;\ \}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_loan_calculator_a7e12089734916fb9319bb678ad221e58}{setOpeningFee}}(\textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ fee)\ \{\ openingFee\_\ =\ fee;\ \}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_loan_calculator_a5331495e9736a1bb80cf4acb315a7fec}{setOpeningPercent}}(\textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ percent)\ \{\ openingPercent\_\ =\ percent;\ \}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{comment}{//\ Getters}}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ getPeriodTotal()\ \{\ \textcolor{keywordflow}{return}\ periodTotal\_;\ \}}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ getOpeningFee()\ \{\ \textcolor{keywordflow}{return}\ openingFee\_;\ \}}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ getOpeningPercent()\ \{\ \textcolor{keywordflow}{return}\ openingPercent\_;\ \}}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_loan_calculator_ae0febfab39ea987ede3b75157b893464}{calculateLoanBalance}}();}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_loan_calculator_a728212380d4c208992dc89fce0280edb}{calculatePayment}}();}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_loan_calculator_ab7a47fec2b8ffc63a1eae6d55a236f78}{calculateNumberPayments}}();}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_loan_calculator_a289aa32a75f5eacc8f16eeea4fb7c2dc}{calculateLoanAmount}}();}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_loan_calculator_a145b491eda0404751cc16233c5e5b0f4}{calculateInterestRate}}();}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_loan_calculator_ad2546bc29d720c0f7043ecf67b928056}{calculateEffectiveInterestRate}}();}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ amount\_;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{int}\ periodTotal\_;\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ interest\_;\ \ \ \ \ \ }
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ payment\_;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{int}\ periodElapsed\_;\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ initialPayment\_;}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ openingFee\_;\ \ \ \ }
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ openingPercent\_;}
+\DoxyCodeLine{00133\ \};}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
